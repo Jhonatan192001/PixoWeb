@@ -1,8 +1,21 @@
-# React + Vite
+# PIXO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene el código fuente de una página web orientada a ofrecer servicios de desarrollo de software y soluciones tecnológicas. La aplicación está construida utilizando tecnologías modernas y mejores prácticas de desarrollo para garantizar rendimiento, escalabilidad y una experiencia de usuario optimizada.
 
-Currently, two official plugins are available:
+![](https://github.com/JhonaRPDev/PixoWeb/blob/main/portada.jpeg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>Tecnologías Utilizadas</h2>
+Frontend:
+<ul>
+<li><strong>React:</strong> Frameworks modernos para la construcción de interfaces de usuario dinámicas y reactivas.</li>
+<li><strong>TailwindCSS:</strong> Frameworks modernos para la estilizacion de los compoientnes.</li>
+<li><strong>GSAP:<strong> Frameworks modernos para la animacion de los componetnes.</li>
+</ul>
+
+<h2>Características</h2>
+<ul>
+<li>Diseño Responsivo: Adaptado para todos los dispositivos, garantizando una experiencia de usuario consistente.</li>
+<li>Optimización SEO: Mejores prácticas para mejorar el posicionamiento en motores de búsqueda.</li>
+<li>Rendimiento: Optimización de carga y minimización de recursos.</li>
+<li>Accesibilidad: Interfaz amigable y accesible para todos los usuarios.</li>
+</ul>
