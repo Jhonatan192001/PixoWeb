@@ -30,7 +30,7 @@ function App() {
               <Route path="paginaweb" element={<PaginaWeb />} />
             </Route>
           </Routes>
-          <div className="px-5 sm:px-10 lg:px-24 pb-10">
+          <div className="px-5 sm:px-10 lg:px-24 py-20">
             <Contact />
           </div>
         </main>

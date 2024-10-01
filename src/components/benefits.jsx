@@ -1,8 +1,8 @@
-import GenericIcon from "/icon.svg";
+import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-const Benefits = () => {
+const Benefits = ({ title, benefits }) => {
   const benefitsRef = useRef(null);
 
   useEffect(() => {
@@ -27,38 +27,33 @@ const Benefits = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full py-32" ref={benefitsRef}>
+    <div className="flex flex-col items-center justify-center w-full py-20" ref={benefitsRef}>
       <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8">
-        ¿Qué obtienes con el marketing digital de Pixo?
+        {title}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full">
-        <div className="benefit rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
-          <img src={GenericIcon} alt="Icono" className="w-16 h-16 mb-4" />
-          <h2 className="text-lg text-center text-white font-bold">
-            Optimización en Tiempo Real
-          </h2>
-        </div>
-        <div className="benefit rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
-          <img src={GenericIcon} alt="Icono" className="w-16 h-16 mb-4" />
-          <h2 className="text- text-center text-white font-bold">
-            Segmentación Precisa
-          </h2>
-        </div>
-        <div className="benefit rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
-          <img src={GenericIcon} alt="Icono" className="w-16 h-16 mb-4" />
-          <h2 className="text-lg text-center text-white font-bold">
-            Automatización Eficiente
-          </h2>
-        </div>
-        <div className="benefit rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
-          <img src={GenericIcon} alt="Icono" className="w-16 h-16 mb-4" />
-          <h2 className="text-lg text-center text-white font-bold">
-            Mejora Constante del Retorno de Inversión (ROI)
-          </h2>
-        </div>
+        {benefits.map((benefit, index) => (
+          <div key={index} className="benefit rounded-lg shadow-md p-6 flex flex-col items-center justify-center">
+            <img src={benefit.image} alt={benefit.alt} className="w-16 h-16 mb-4" />
+            <h2 className="text-lg text-center text-white font-bold">
+              {benefit.subtitle}
+            </h2>
+          </div>
+        ))}
       </div>
     </div>
   );
+};
+
+Benefits.propTypes = {
+  title: PropTypes.string.isRequired,
+  benefits: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+      subtitle: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Benefits;

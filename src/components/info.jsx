@@ -17,14 +17,14 @@ const Info = ({ title, description, imageSrc }) => {
         </h1>
 
         {description && (
-          <p className="text-white text-lg text-center mb-8">{description}</p>
+          <p className="text-white text-lg text-center py-8">{description}</p>
         )}
         <div className="flex justify-center">
           <Button onClick={toggleModal}>COTIZA AHORA</Button>
         </div>
 
         {imageSrc && (
-          <div className="mt-12 flex justify-center">
+          <div className="pt-10 flex justify-center">
             <img
               src={imageSrc}
               alt="Info"

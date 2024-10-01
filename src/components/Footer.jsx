@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-screen-xl p-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 md:w-1/3">
             <Link to="/">
@@ -71,7 +71,7 @@ const Footer = () => {
 
         <hr className="my-6 border-gray-300 sm:mx-auto lg:my-8" />
 
-        <div className="sm:flex sm:items-center sm:justify-center">
+        <div className="flex items-center justify-center">
           <span className="text-sm font-semibold text-black sm:text-center">
              PIXO Company <span className="text-lg align-super">&reg;</span> 2023 - 2024
           </span>

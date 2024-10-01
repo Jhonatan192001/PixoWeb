@@ -81,7 +81,7 @@ const Hero = ({
   }, [paragraph]);
 
   return (
-    <div ref={containerRef} className={`relative ${height} w-full overflow-hidden mb-12`}>
+    <div ref={containerRef} className={`relative ${height} w-full overflow-hidden`}>
       {backgroundType === "video" ? (
         <video
           ref={backgroundRef}

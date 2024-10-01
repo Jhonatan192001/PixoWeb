@@ -35,8 +35,8 @@ const ServicesCompany = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-6 lg:px-24 mb-12 sm:mb-24">
-      <div className="text-start mb-8">
+    <div className="px-4 sm:px-6 lg:px-24 py-20">
+      <div className="text-start">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
           PIXO te ofrece lo mejor
         </h1>

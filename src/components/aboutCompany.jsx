@@ -1,9 +1,9 @@
 const AboutCompany = () => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-5 sm:px-10 lg:px-24 py-7 md:py-12 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-5 sm:px-10 lg:px-24 py-20">
         {/* Contenedor del texto */}
         <div className="flex flex-col justify-center">
-          <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-center md:text-left">
+          <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl font-bold py-6 text-center md:text-left">
             Conoce más de PIXO IA
           </h1>
           <p className="text-white text-base leading-relaxed text-center md:text-left">
