@@ -2,11 +2,11 @@ import Card from "../components/Card";
 
 const Services = () => {
   const cards = [
-    { image: "/Inteligencia_Artificial.jpg", title: "Inteligencia Artificial con Pixo", span: "col-span-full" },
-    { image: "/marketing_digital.jpg", title: "Marketing Digital" },
-    { image: "/Desarrollo_software.jpg", title: "Desarrollo de Software" },
-    { image: "/Diseño_grafico.jpg", title: "Diseño Gráfico" },
-    { image: "/paginas_web.jpg", title: "Páginas Web" },
+    { image: "/inteligenciaArtificial.jpg", title: "Inteligencia Artificial con Pixo", span: "col-span-full", href: "/services/ai" },
+    { image: "/marketingDigital.jpg", title: "Marketing Digital", href: "/services/marketing" },
+    { image: "/desarrolloSoftware.jpg", title: "Desarrollo de Software", href: "/services/software" },
+    { image: "/diseñoGrafico.jpg", title: "Diseño Gráfico", href: "/services/disenografico" },
+    { image: "/paginasWeb.jpg", title: "Páginas Web", href: "/services/paginaweb" },
   ];
 
   return (
@@ -18,6 +18,7 @@ const Services = () => {
             title={card.title}
             className="h-64 sm:h-80 shadow-md transition-all duration-300 ease-in-out uppercase"
             isServices={true}
+            href={card.href}
           />
         </div>
       ))}

@@ -66,7 +66,7 @@ const Modal = ({ isVisible, onClose }) => {
 
           <div className="mt-4">
             <div className="flex justify-center">
-              <img src="/logo_pixo.png" className="h-12 w-20" alt="" />
+              <img src="/logoPixo.png" className="h-12 w-20" alt="" />
             </div>
             <h2 className="text-center text-2xl font-bold mb-4 uppercase">
               Cotiza Ahora

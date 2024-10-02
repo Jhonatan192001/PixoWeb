@@ -1,20 +1,22 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 const Card = ({ 
     image, 
     title = null,
     description = null,
     className = "", 
-    isServices = false 
+    isServices = false,
+    href = null
 }) => {
     const cardClasses = classNames(
-        'relative bg-white shadow-md rounded-lg overflow-hidden cursor-pointer',
+        'relative shadow-md rounded-lg overflow-hidden cursor-pointer',
         className,
         { 'group hover:scale-105 transition-transform duration-300': isServices }
     );
 
-    return (
+    const CardContent = (
         <div className={cardClasses}>
             {image && (
                 <div className="absolute inset-0">
@@ -31,7 +33,7 @@ const Card = ({
                 isServices ? 'justify-center items-center' : 'justify-between'
             }`}>
                 {title && (
-                    <h2 className={`sm:text-xl font-bold text-white mb-2 ${
+                    <h2 className={`sm:text-xl md:text-2xl font-medium text-white mb-2 ${
                         isServices ? 'text-center group-hover:scale-110 transition-transform duration-300' : ''
                     }`}>
                         {title}
@@ -46,6 +48,16 @@ const Card = ({
             </div>
         </div>
     );
+
+    return href ? (
+        <Link to={href} className={cardClasses}>
+            {CardContent}
+        </Link>
+    ) : (
+        <div className={cardClasses}>
+            {CardContent}
+        </div>
+    );
 };
 
 Card.propTypes = {
@@ -54,6 +66,7 @@ Card.propTypes = {
     description: PropTypes.string,
     className: PropTypes.string,
     isServices: PropTypes.bool,
+    href: PropTypes.string,
 };
 
 export default Card;

@@ -44,9 +44,9 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/">
             <img
-              src="/logo_pixo.png"
-              alt="Logo"
-              className="w-14 h-8 sm:w-16 sm:h-9 lg:w-20 lg:h-11"
+              src="/logoPixo.png"
+              alt="Logo Pixo"
+              className="w-14 h-8 sm:w-16 sm:h-9 lg:w-24 lg:h-12"
             />
           </Link>
         </div>

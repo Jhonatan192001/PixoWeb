@@ -8,27 +8,27 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const ServicesCompany = () => {
   const cards = [
     {
-      image: "/Inteligencia_Artificial.jpg",
+      image: "/inteligenciaArtificial.jpg",
       title: "Inteligencia Artificial",
       description: "La IA al servicio de tu negocio",
     },
     {
-      image: "/marketing_digital.jpg",
+      image: "/marketingDigital.jpg",
       title: "Marketing Digital",
       description: "Transforma tu presencia en línea",
     },
     {
-      image: "/Desarrollo_software.jpg",
+      image: "/desarrolloSoftware.jpg",
       title: "Desarrollo Software",
       description: "Soluciones tecnológicas a medida",
     },
     {
-      image: "/Diseño_grafico.jpg",
+      image: "/diseñoGrafico.jpg",
       title: "Diseño Gráfico",
       description: "Creaciones visuales impactantes",
     },
     {
-      image: "/paginas_web.jpg",
+      image: "/paginasWeb.jpg",
       title: "Página Web",
       description: "Tu negocio en el mundo digital",
     },
@@ -37,10 +37,10 @@ const ServicesCompany = () => {
   return (
     <div className="px-4 sm:px-6 lg:px-24 py-20">
       <div className="text-start">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 text-white">
           PIXO te ofrece lo mejor
         </h1>
-        <p className="text-lg text-white max-w-3xl">
+        <p className="text-xl text-white max-w-xl">
           Descubre cómo los servicios de Pixo IA pueden transformar tu negocio
           con soluciones personalizadas
         </p>

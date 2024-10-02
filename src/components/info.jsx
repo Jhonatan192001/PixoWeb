@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Button from "./button";
 import Modal from "./modalForm";
 
 const Info = ({ title, description, imageSrc }) => {
@@ -11,7 +10,7 @@ const Info = ({ title, description, imageSrc }) => {
   };
   return (
     <div className="flex flex-col items-center justify-center w-full py-20">
-      <div className="max-w-4xl w-full px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full w-full px-4 sm:px-6 lg:px-16">
         <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8">
           {title}
         </h1>
@@ -20,7 +19,6 @@ const Info = ({ title, description, imageSrc }) => {
           <p className="text-white text-lg text-center py-8">{description}</p>
         )}
         <div className="flex justify-center">
-          <Button onClick={toggleModal}>COTIZA AHORA</Button>
         </div>
 
         {imageSrc && (
@@ -28,7 +26,7 @@ const Info = ({ title, description, imageSrc }) => {
             <img
               src={imageSrc}
               alt="Info"
-              className="w-full max-w-md sm:max-w-lg lg:max-w-xl rounded-lg shadow-lg"
+              className="w-full max-w-md sm:max-w-lg lg:max-w-[1034px] lg:h-[653px] rounded-lg shadow-lg"
             />
           </div>
         )}

@@ -26,7 +26,6 @@ const Hero = ({
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Animación del título y párrafo
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: titleRef.current,
@@ -109,14 +108,14 @@ const Hero = ({
       >
         <h1
           ref={titleRef}
-          className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase pt-10 sm:pt-0"
+          className="text-3xl md:text-5xl font-bold text-white mb-6 uppercase pt-10 sm:pt-0"
         >
           {typed ? <ReactTyped strings={[title]} typeSpeed={60} loop /> : title}
         </h1>
         {paragraph && (
           <p
             ref={paragraphRef}
-            className="md:text-sm xl:text-lg text-gray-300 font-extralight max-w-3xl"
+            className="md:text-sm lg:text-xl text-gray-300 font-normal max-w-3xl"
           >
             {paragraph}
           </p>

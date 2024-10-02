@@ -1,4 +1,5 @@
 import Benefits from "../../components/benefits";
+import Contact from "../../components/contact";
 import Container from "../../components/container";
 import Hero from "../../components/Hero";
 import Info from "../../components/info";
@@ -6,23 +7,23 @@ import Info from "../../components/info";
 const PaginaWeb = () => {
   const paginaWebBenefits = [
     {
-      image: "/public/iconos para pixo-09.jpg",
-      alt: "Icono de Optimización en Tiempo Real",
+      image: "/experienciaUsuario.jpg",
+      alt: "Experiencia de Usuario Optimizada",
       subtitle: "Experiencia de Usuario Optimizada",
     },
     {
-      image: "/public/iconos para pixo-07.jpg",
-      alt: "Icono de Segmentación Precisa",
+      image: "/seo.jpg",
+      alt: "Optimización para Motores de Búsqueda (SEO)",
       subtitle: "Optimización para Motores de Búsqueda (SEO)",
     },
     {
-      image: "/public/iconos para pixo-14.jpg",
-      alt: "Icono de Automatización Eficiente",
+      image: "/diseñoAdaptativo.jpg",
+      alt: "Diseño Adaptativo y Responsivo",
       subtitle: "Diseño Adaptativo y Responsivo",
     },
     {
-      image: "/public/iconos para pixo-15.jpg",
-      alt: "Icono de Mejora Constante del ROI",
+      image: "/actualizacionEscalabilidad.jpg",
+      alt: "Actualización y Escalabilidad Sencilla",
       subtitle: "Actualización y Escalabilidad Sencilla",
     },
   ];
@@ -31,7 +32,7 @@ const PaginaWeb = () => {
       <div className="w-full">
         <Hero
           backgroundType="image"
-          backgroundSrc="/paginas_web.jpg"
+          backgroundSrc="/paginasWeb.jpg"
           title="Pagina Web"
           titleAlignment="center"
           typed={true}
@@ -40,13 +41,16 @@ const PaginaWeb = () => {
 
       <Container>
         <Benefits
-            title="¿Qué obtienes con las Páginas Web de Pixo?"
-            benefits={paginaWebBenefits}
-          />
-          <Info
-            title="Soluciones a medida impulsadas por inteligencia artificial"
-            description="El software que creamos está diseñado para resolver tus problemas específicos. Usamos la inteligencia artificial para construir aplicaciones que se adaptan y aprenden de tus necesidades. Desde automatizar tareas repetitivas hasta mejorar la seguridad de tus datos, nuestro software te facilita la vida y mejora la eficiencia de tu negocio. Desarrollamos herramientas que, con el tiempo, se vuelven aún más inteligentes, ayudándote a crecer sin complicaciones."
-          />
+          title="¿Qué obtienes con las Páginas Web de Pixo?"
+          benefits={paginaWebBenefits}
+        />
+        <Info
+          title="Soluciones a medida impulsadas por inteligencia artificial"
+          description="El software que creamos está diseñado para resolver tus problemas específicos. Usamos la inteligencia artificial para construir aplicaciones que se adaptan y aprenden de tus necesidades. Desde automatizar tareas repetitivas hasta mejorar la seguridad de tus datos, nuestro software te facilita la vida y mejora la eficiencia de tu negocio. Desarrollamos herramientas que, con el tiempo, se vuelven aún más inteligentes, ayudándote a crecer sin complicaciones."
+        />
+        <div className="px-5 sm:px-10 lg:px-24 py-20">
+          <Contact />
+        </div>
       </Container>
     </div>
   );

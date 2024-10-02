@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./page/Home";
 import Company from "./page/Company";
-import Contact from "./components/contact";
 import Footer from "./components/Footer";
 import Services from "./page/Services";
 import Marketing from "./page/pagesPixo/marketing";
@@ -11,7 +10,7 @@ import IAPixo from "./page/pagesPixo/IAPixo";
 import Software from "./page/pagesPixo/software";
 import DisenoGrafico from "./page/pagesPixo/disenoGrafico";
 import PaginaWeb from "./page/pagesPixo/paginaweb";
-import ScrollToTopButton from "./components/ScrollToTopButton"; // Importar el botón
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -30,9 +29,6 @@ function App() {
               <Route path="paginaweb" element={<PaginaWeb />} />
             </Route>
           </Routes>
-          <div className="px-5 sm:px-10 lg:px-24 py-20">
-            <Contact />
-          </div>
         </main>
         <Footer />
         <ScrollToTopButton />

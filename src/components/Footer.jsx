@@ -7,11 +7,10 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 md:w-1/3">
             <Link to="/">
-              <img src="/logo_pixo.png" alt="PIXO Logo" className="h-14" />
+              <img src="/logoPixo.png" alt="PIXO Logo" className="h-14" />
             </Link>
-            <p className="text-black text-base pr-24 leading-relaxed">
-              Transformamos tus ideas en soluciones inteligentes, impulsando tu
-              negocio y cuidando tu bienestar.
+            <p className="text-black text-base sm:text-xl font-medium leading-relaxed">
+            La inteligencia artificial que transforma tus ideas en soluciones inteligentes, impulsando tu negocio y cuidando tu bienestar.
             </p>
           </div>
 
