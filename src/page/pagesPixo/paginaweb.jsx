@@ -40,13 +40,13 @@ const PaginaWeb = () => {
       </div>
 
       <Container>
-        <Benefits
-          title="¿Qué obtienes con las Páginas Web de Pixo?"
-          benefits={paginaWebBenefits}
-        />
         <Info
           title="Soluciones a medida impulsadas por inteligencia artificial"
           description="El software que creamos está diseñado para resolver tus problemas específicos. Usamos la inteligencia artificial para construir aplicaciones que se adaptan y aprenden de tus necesidades. Desde automatizar tareas repetitivas hasta mejorar la seguridad de tus datos, nuestro software te facilita la vida y mejora la eficiencia de tu negocio. Desarrollamos herramientas que, con el tiempo, se vuelven aún más inteligentes, ayudándote a crecer sin complicaciones."
+        />
+        <Benefits
+          title="¿Qué obtienes con las Páginas Web de Pixo?"
+          benefits={paginaWebBenefits}
         />
         <div className="px-5 sm:px-10 lg:px-24 py-20">
           <Contact />

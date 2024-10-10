@@ -2,7 +2,7 @@ import AboutCompany from "../components/aboutCompany";
 import Contact from "../components/contact";
 import Info from "../components/info";
 import HeroCompany from "../sections/heroCompany";
-import ServicesCompany from "../sections/servicesCompany";
+import ServicesCompany from "../sections/ServicesCompany";
 
 const Company = () => {
   return (
