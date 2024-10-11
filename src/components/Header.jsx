@@ -54,12 +54,23 @@ const Header = () => {
         <ul className="hidden md:flex items-center space-x-8 text-white font-bold uppercase">
           <NavItem label="Inicio" to="/" />
           <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-white font-bold uppercase"
-            >
-              PIXO IA
-            </button>
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="text-white hover:text-blue-500 font-bold uppercase flex items-center"
+          >
+            PIXO IA
+            <span className="ml-2">
+              {isDropdownOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </span>
+          </button>
             {isDropdownOpen && (
               <ul className="absolute w-60 top-full bg-black/60 text-white py-2 pr-4 space-y-2 uppercase z-50">
                 <NavItem label="Marketing Digital" to="/services/marketing" onClick={closeDropdowns} />
@@ -109,12 +120,23 @@ const Header = () => {
             <ul className="flex flex-col items-center uppercase">
               <NavItem label="Inicio" to="/" onClick={() => setIsMobileMenuOpen(false)} />
               <li className="w-full">
-                <button
-                  onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
-                  className="w-full text-white py-2 px-4 text-center"
-                >
-                  PIXO IA
-                </button>
+              <button
+                onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                className="w-full text-white hover:text-blue-500 py-2 px-4 flex justify-center items-center"
+              >
+                PIXO IA
+                <span className="ml-2">
+                  {isMobileDropdownOpen ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                    </svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                </span>
+              </button>
                 <ul 
                   className={`bg-black/70 text-white overflow-hidden transition-all duration-300 ease-in-out text-center ${
                     isMobileDropdownOpen ? 'max-h-96' : 'max-h-0'

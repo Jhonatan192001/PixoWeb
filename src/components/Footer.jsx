@@ -21,7 +21,7 @@ const Footer = () => {
               </h2>
               <ul className="text-black space-y-2">
                 <li>
-                  <Link to="/company" className="hover:underline">
+                  <Link to="/company" className="hover:underline hover:text-blue-500">
                     Sobre Nosotros
                   </Link>
                 </li>
@@ -39,27 +39,27 @@ const Footer = () => {
               </h2>
               <ul className="text-black space-y-2">
                 <li>
-                  <Link to="/services/ai" className="hover:underline">
+                  <Link to="/services/ai" className="hover:underline hover:text-blue-500">
                     Inteligencia Artificial PIXO
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/marketing" className="hover:underline">
+                  <Link to="/services/marketing" className="hover:underline hover:text-blue-500">
                     Marketing Digital
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/software" className="hover:underline">
+                  <Link to="/services/software" className="hover:underline hover:text-blue-500">
                     Desarrollo de Software
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/paginaweb" className="hover:underline">
+                  <Link to="/services/paginaweb" className="hover:underline hover:text-blue-500">
                     Páginas Web
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/disenografico" className="hover:underline">
+                  <Link to="/services/disenografico" className="hover:underline hover:text-blue-500">
                     Diseño Gráfico
                   </Link>
                 </li>

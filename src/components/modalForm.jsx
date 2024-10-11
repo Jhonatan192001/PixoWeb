@@ -1,4 +1,6 @@
 import { useEffect, useRef } from "react";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 import { gsap } from "gsap";
 import PropTypes from "prop-types";
 import Button from "./button";
@@ -6,6 +8,7 @@ import Button from "./button";
 const Modal = ({ isVisible, onClose }) => {
   const modalRef = useRef(null);
   const backdropRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
     if (isVisible) {
@@ -29,6 +32,39 @@ const Modal = ({ isVisible, onClose }) => {
       },
     });
     gsap.to(backdropRef.current, { opacity: 0, duration: 0.5 });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_rsv014t",
+        "template_jjl1p5h",
+        formRef.current,
+        "wNZu7tygUS6HGStlP"
+      )
+      .then(
+        (result) => {
+          console.log("Correo enviado:", result.text);
+          Swal.fire({
+            icon: "success",
+            title: "¡Correo Enviado!",
+            text: "Correo enviado correctamente",
+            confirmButtonText: "OK",
+          });
+          handleModalClose();
+        },
+        (error) => {
+          console.log("Error al enviar:", error.text);
+          Swal.fire({
+            icon: "error",
+            title: "¡Error!",
+            text: "Error al enviar el correo",
+            confirmButtonText: "OK",
+          });
+        }
+      );
   };
 
   if (!isVisible) return null;
@@ -71,28 +107,36 @@ const Modal = ({ isVisible, onClose }) => {
             <h2 className="text-center text-2xl font-bold mb-4 uppercase">
               Cotiza Ahora
             </h2>
-            <form>
+            <form ref={formRef} onSubmit={sendEmail}>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Nombre"
                 className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
               />
               <input
                 type="email"
+                name="user_email"
                 placeholder="Correo electrónico"
                 className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
               />
               <input
                 type="text"
+                name="user_phone"
                 placeholder="Número Telefónico"
                 className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
               />
               <textarea
+                name="project_description"
                 placeholder="Descripción del proyecto"
                 className="block w-full p-2 mb-4 border border-gray-300 rounded"
+                required
               />
               <div className="flex justify-center">
-                <Button onClick="submit">Enviar</Button>
+                <Button type="submit">Enviar</Button>
               </div>
             </form>
           </div>
