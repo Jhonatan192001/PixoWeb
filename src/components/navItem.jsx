@@ -2,10 +2,19 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const NavItem = ({ label, to, onClick, className = "", children }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
   const content = (
     <span
       className={`cursor-pointer hover:text-blue-500 transition duration-300 ${className}`}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {label}
     </span>

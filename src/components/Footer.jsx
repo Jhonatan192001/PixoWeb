@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import FooterLink from './footerLink';
 
 const Footer = () => {
   return (
@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0 md:w-1/3">
-            <Link to="/">
+            <FooterLink to="/">
               <img src="/logoPixo.png" alt="PIXO Logo" className="h-14" />
-            </Link>
+            </FooterLink>
             <p className="text-black text-base sm:text-xl font-medium leading-relaxed">
-            La inteligencia artificial que transforma tus ideas en soluciones inteligentes, impulsando tu negocio y cuidando tu bienestar.
+              La inteligencia artificial que transforma tus ideas en soluciones inteligentes, impulsando tu negocio y cuidando tu bienestar.
             </p>
           </div>
 
@@ -21,14 +21,14 @@ const Footer = () => {
               </h2>
               <ul className="text-black space-y-2">
                 <li>
-                  <Link to="/company" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/company">
                     Sobre Nosotros
-                  </Link>
+                  </FooterLink>
                 </li>
                 <li>
-                  <Link to="" className="hover:underline">
+                  <FooterLink to="">
                     Seguridad
-                  </Link>
+                  </FooterLink>
                 </li>
               </ul>
             </div>
@@ -39,29 +39,29 @@ const Footer = () => {
               </h2>
               <ul className="text-black space-y-2">
                 <li>
-                  <Link to="/services/ai" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/services/ai">
                     Inteligencia Artificial PIXO
-                  </Link>
+                  </FooterLink>
                 </li>
                 <li>
-                  <Link to="/services/marketing" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/services/marketing">
                     Marketing Digital
-                  </Link>
+                  </FooterLink>
                 </li>
                 <li>
-                  <Link to="/services/software" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/services/software">
                     Desarrollo de Software
-                  </Link>
+                  </FooterLink>
                 </li>
                 <li>
-                  <Link to="/services/paginaweb" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/services/paginaweb">
                     Páginas Web
-                  </Link>
+                  </FooterLink>
                 </li>
                 <li>
-                  <Link to="/services/disenografico" className="hover:underline hover:text-blue-500">
+                  <FooterLink to="/services/disenografico">
                     Diseño Gráfico
-                  </Link>
+                  </FooterLink>
                 </li>
               </ul>
             </div>

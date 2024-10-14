@@ -21,6 +21,11 @@ const Header = () => {
     setIsMobileDropdownOpen(false);
   };
 
+  const handleNavItemClick = () => {
+    closeDropdowns();
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -52,7 +57,7 @@ const Header = () => {
         </div>
 
         <ul className="hidden md:flex items-center space-x-8 text-white font-bold uppercase">
-          <NavItem label="Inicio" to="/" />
+          <NavItem label="Inicio" to="/" onClick={handleNavItemClick} />
           <div className="relative" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -71,18 +76,18 @@ const Header = () => {
               )}
             </span>
           </button>
-            {isDropdownOpen && (
-              <ul className="absolute w-60 top-full bg-black/60 text-white py-2 pr-4 space-y-2 uppercase z-50">
-                <NavItem label="Marketing Digital" to="/services/marketing" onClick={closeDropdowns} />
-                <NavItem label="Desarrollo de Software" to="/services/software" onClick={closeDropdowns} />
-                <NavItem label="Inteligencia Artificial" to="/services/ai" onClick={closeDropdowns} />
-                <NavItem label="Diseño Gráfico" to="/services/disenografico" onClick={closeDropdowns} />
-                <NavItem label="Páginas Web" to="/services/paginaweb" onClick={closeDropdowns} />
-              </ul>
-            )}
-          </div>
-          <NavItem label="Compañía" to="/company" />
-        </ul>
+          {isDropdownOpen && (
+            <ul className="absolute w-60 top-full bg-black/60 text-white py-2 pr-4 space-y-2 uppercase z-50">
+              <NavItem label="Marketing Digital" to="/services/marketing" onClick={handleNavItemClick} />
+              <NavItem label="Desarrollo de Software" to="/services/software" onClick={handleNavItemClick} />
+              <NavItem label="Inteligencia Artificial" to="/services/ai" onClick={handleNavItemClick} />
+              <NavItem label="Diseño Gráfico" to="/services/disenografico" onClick={handleNavItemClick} />
+              <NavItem label="Páginas Web" to="/services/paginaweb" onClick={handleNavItemClick} />
+            </ul>
+          )}
+        </div>
+        <NavItem label="Compañía" to="/company" onClick={handleNavItemClick} />
+      </ul>
 
         <div className="hidden md:block">
           <Button
@@ -116,10 +121,10 @@ const Header = () => {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-black/60 text-white z-40" ref={mobileMenuRef}>
-            <ul className="flex flex-col items-center uppercase">
-              <NavItem label="Inicio" to="/" onClick={() => setIsMobileMenuOpen(false)} />
-              <li className="w-full">
+        <div className="absolute top-full left-0 w-full bg-black/60 text-white z-40" ref={mobileMenuRef}>
+          <ul className="flex flex-col items-center uppercase">
+            <NavItem label="Inicio" to="/" onClick={handleNavItemClick} />
+            <li className="w-full">
               <button
                 onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
                 className="w-full text-white hover:text-blue-500 py-2 px-4 flex justify-center items-center"
@@ -137,20 +142,19 @@ const Header = () => {
                   )}
                 </span>
               </button>
-                <ul 
-                  className={`bg-black/70 text-white overflow-hidden transition-all duration-300 ease-in-out text-center ${
-                    isMobileDropdownOpen ? 'max-h-96' : 'max-h-0'
-                  }`}
-                ><div className="py-3">
-                  <NavItem className="border-b-2" label="Desarrollo de Software" to="/services/software" onClick={closeDropdowns} />
-                  <NavItem className="border-b-2" label="Marketing Digital" to="/services/marketing" onClick={closeDropdowns} />
-                  <NavItem className="border-b-2" label="Inteligencia Artificial" to="/services/ai" onClick={closeDropdowns} />
-                  <NavItem className="border-b-2" label="Diseño Gráfico" to="/services/disenografico" onClick={closeDropdowns} />
-                  <NavItem className="border-b-2" label="Páginas Web" to="/services/paginaweb" onClick={closeDropdowns} />
+              <ul className={`bg-black/70 text-white overflow-hidden transition-all duration-300 ease-in-out text-center ${
+                isMobileDropdownOpen ? 'max-h-96' : 'max-h-0'
+              }`}>
+                <div className="py-3">
+                  <NavItem className="border-b-2" label="Desarrollo de Software" to="/services/software" onClick={handleNavItemClick} />
+                  <NavItem className="border-b-2" label="Marketing Digital" to="/services/marketing" onClick={handleNavItemClick} />
+                  <NavItem className="border-b-2" label="Inteligencia Artificial" to="/services/ai" onClick={handleNavItemClick} />
+                  <NavItem className="border-b-2" label="Diseño Gráfico" to="/services/disenografico" onClick={handleNavItemClick} />
+                  <NavItem className="border-b-2" label="Páginas Web" to="/services/paginaweb" onClick={handleNavItemClick} />
                 </div>
-                </ul>
-              </li>
-              <NavItem label="Compañía" to="/company" onClick={() => setIsMobileMenuOpen(false)} />
+              </ul>
+            </li>
+            <NavItem label="Compañía" to="/company" onClick={handleNavItemClick} />
               <li className="py-2 px-4 w-full">
                 <Button 
                   onClick={() => { toggleModal(); setIsMobileMenuOpen(false); }}
