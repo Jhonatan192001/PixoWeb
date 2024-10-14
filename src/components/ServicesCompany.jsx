@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";

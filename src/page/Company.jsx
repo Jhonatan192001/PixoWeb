@@ -1,8 +1,8 @@
 import AboutCompany from "../components/aboutCompany";
 import Contact from "../components/contact";
+import HeroCompany from "../components/heroCompany";
 import Info from "../components/info";
-import HeroCompany from "../sections/heroCompany";
-import ServicesCompany from "../sections/ServicesCompany";
+import ServicesCompany from "../components/ServicesCompany";
 
 const Company = () => {
   return (

@@ -32,7 +32,7 @@ const DisenoGrafico = () => {
       <Hero
         backgroundType="image"
         backgroundSrc="/diseñoGrafico.jpg"
-        title="Diseño Grafico"
+        title="Diseño Gráfico"
         titleAlignment="center"
         typed={true}
       />

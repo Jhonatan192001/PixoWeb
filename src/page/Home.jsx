@@ -1,7 +1,7 @@
 import Brand from "../components/brand";
 import Contact from "../components/contact";
 import Hero from "../components/Hero";
-import Services from "../sections/Services";
+import Services from "../components/Services";
 
 const images = [
   "/logoCachosToro.jpg",
